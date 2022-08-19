@@ -26,7 +26,7 @@ export const Menu = () => {
     setCharacters([]);
     const data = await fetchCharacterByName(character);
     if (doesDataExist(data)) {
-      setCharacters(data);
+      setCharacters(data.slice(0, 3));
       setAlert(false);
     } else {
       setAlert(true);
